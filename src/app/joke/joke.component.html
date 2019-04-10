@@ -1,3 +1,16 @@
-<p>
-  joke works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <img
+        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/chuck-norris-finger-wag-1551304759.jpg?crop=0.864xw:1xh;center,top&resize=480:*">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <button type="button" (click)="getJoke()" class="mx-auto btn btn-primary mt-5">Generate a joke</button>
+      <div class="mt-5">
+        <p>{{rJoke?.value.joke}}</p>
+      </div>
+    </div>
+  </div>
+</div>
