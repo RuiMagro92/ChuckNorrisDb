@@ -9,6 +9,7 @@ import { CategoryComponent } from './category/category.component';
 import { CategoriesComponent } from './categories/categories.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MenuComponent} from './menu/menu.component';
+import { CustomJokeComponent } from './custom-joke/custom-joke.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {MenuComponent} from './menu/menu.component';
     CategoryComponent,
     MenuComponent,
     CategoriesComponent,
+    CustomJokeComponent,
   ],
   imports: [
     BrowserModule,
