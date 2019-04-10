@@ -9,7 +9,7 @@ import {JokeCategory} from './models/jokeCategory.model';
 })
 export class JokeCategoryService {
   API_URL = 'https://api.icndb.com';
-  constructor(public http: HttpClient) {}
+  constructor(public http: HttpClient ) {}
 
   getJokesFromCategory(category: string): Observable<JokeCategory> {
       return this.http.get<JokeCategory>(this.API_URL + '/jokes/?limitTo=[' + category + ']');
