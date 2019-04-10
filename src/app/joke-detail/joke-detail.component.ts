@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {JokeService} from '../joke.service';
 import {RandomJoke} from '../models/randomjoke.model';
 import {ActivatedRoute} from '@angular/router';
+import {JokeCategoryService} from '../joke-category.service';
+import {JokeCategory} from '../models/jokeCategory.model';
 
 @Component({
   selector: 'app-joke-detail',
@@ -10,9 +11,9 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class JokeDetailComponent implements OnInit {
 
-  jokes: RandomJoke[];
+  jokes: JokeCategory;
 
-  constructor(private js: JokeService, public ar: ActivatedRoute) { }
+  constructor(private jcs: JokeCategoryService, public ar: ActivatedRoute) { }
 
 
   ngOnInit() {
@@ -21,7 +22,7 @@ export class JokeDetailComponent implements OnInit {
   }
 
   getJokesFromCategory(categoryName: string) {
-    this.js.getJokesFromCategory(categoryName).subscribe(res => {
+    this.jcs.getJokesFromCategory(categoryName).subscribe(res => {
       this.jokes = res;
     });
   }

@@ -19,7 +19,5 @@ API_URL = 'https://api.icndb.com';
     return this.http.get<RandomJoke>(this.API_URL + '/jokes/random?firstName=' + firstname + '&lastName=' + lastname);
   }
 
-  getJokesFromCategory(category: string): Observable<RandomJoke[]> {
-    return this.http.get<RandomJoke[]>(this.API_URL + '/jokes/?limitTo=[' + category + ']');
-  }
+
 }
