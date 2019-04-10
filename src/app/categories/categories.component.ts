@@ -10,7 +10,7 @@ import {CategoryService} from '../category.service';
 })
 export class CategoriesComponent implements OnInit {
 
-  categories: Category[];
+  categories: Category;
 
   constructor(private cs: CategoryService) { }
 
