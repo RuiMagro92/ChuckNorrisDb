@@ -1,15 +1,27 @@
-<div class="container">
+<div class="container mt-5 rounded shadow-lg" style="height: 700px;">
   <div class="row">
     <div class="col text-center">
-      <img
-        src="{{gif}}">
+      <img class="mt-5"
+           src="{{gif}}">
     </div>
   </div>
   <div class="row">
     <div class="col text-center">
       <button type="button" (click)="getJoke()" class="mx-auto btn btn-primary mt-5">Generate a joke</button>
-      <div class="mt-5 border border-primary rounded">
-        <p>{{rJoke?.value.joke}}</p>
+      <div class="container ">
+        <div class="row">
+          <div class="col-md-12 d-flex justify-content-center">
+            <blockquote class="quote-box ">
+              <p class="quotation-mark">
+                “
+              </p>
+              <p class="quote-text">
+                {{rJoke?.value.joke}}
+              </p>
+              <hr>
+            </blockquote>
+          </div>
+        </div>
       </div>
     </div>
   </div>

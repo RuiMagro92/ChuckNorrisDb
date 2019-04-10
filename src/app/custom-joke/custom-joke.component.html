@@ -1,4 +1,3 @@
-
 <form #f="ngForm" class="form-group text-center border border-light p-5" (submit)="generateCustomJoke()">
   <p class="h4 mb-4">Create a custom joke</p>
   <img src="https://i.imgflip.com/s5g6p.jpg" style="height: 50px;" class="rounded">
@@ -20,7 +19,7 @@
          #lastnameCtrl="ngModel"
          class="form-control mb-4">
   <button type="submit"
-          [disabled]="nameCtrl.invalid"
+          [disabled]="nameCtrl.invalid || lastnameCtrl.invalid"
           class="btn btn-info btn-block my-4">Generate !
   </button>
 </form>

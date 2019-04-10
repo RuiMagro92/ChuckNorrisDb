@@ -9,12 +9,18 @@ import {RandomJoke} from '../models/randomjoke.model';
 })
 export class JokeComponent implements OnInit {
   rJoke: RandomJoke;
-   gifs = ['https://media.giphy.com/media/BIuuwHRNKs15C/200.gif',
+  gifs = ['https://media.giphy.com/media/BIuuwHRNKs15C/200.gif',
     'https://media.giphy.com/media/w7tU2rQXgRzVK/giphy.gif',
     'https://media2.giphy.com/media/d2jfPv6CUzpopfLa/giphy.gif',
     'https://media.giphy.com/media/xT5LMWvA81jKHj9v44/giphy.gif',
-    'https://media.giphy.com/media/3o6Mb395KnQLgZvSY8/giphy.gif'];
+    'https://media.giphy.com/media/3o6Mb395KnQLgZvSY8/giphy.gif',
+    'https://media2.giphy.com/media/l1J3AS8RShMebsmgU/giphy.gif',
+    'http://31.media.tumblr.com/3851ee6fa84a114646ddf5aabc01e67e/tumblr_nf3m5kj0jD1tq9q5vo2_400.gif',
+    'https://media0.giphy.com/media/Bid9Pf0d4re6c/giphy.gif',
+    'https://thumbs.gfycat.com/DeepHappyGnatcatcher-size_restricted.gif',
+    'https://i.chzbgr.com/full/7075052544/h67277F38/'];
   gif = 'https://media.giphy.com/media/BIuuwHRNKs15C/200.gif';
+
   constructor(public jokeService: JokeService) {
   }
 
