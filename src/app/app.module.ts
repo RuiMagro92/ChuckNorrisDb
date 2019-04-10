@@ -10,6 +10,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MenuComponent} from './menu/menu.component';
 import { CustomJokeComponent } from './custom-joke/custom-joke.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CustomJokeComponent } from './custom-joke/custom-joke.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

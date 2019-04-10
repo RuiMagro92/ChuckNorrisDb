@@ -15,7 +15,7 @@ API_URL = 'https://api.icndb.com';
   }
 
   getCustomJoke(firstname: string, lastname: string) {
-    return this.http.get<RandomJoke>(this.API_URL + '/random?firstName=' + firstname + '&amp;lastName=' + lastname);
+    return this.http.get<RandomJoke>(this.API_URL + '/jokes/random?firstName=' + firstname + '&lastName=' + lastname);
   }
 
 }
