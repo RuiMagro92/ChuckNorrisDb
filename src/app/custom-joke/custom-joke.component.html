@@ -1,3 +1,27 @@
-<p>
-  custom-joke works!
-</p>
+<form #f="ngForm" class="form-group" (submit)="save()">
+  <input type="text"
+         [(ngModel)]="name"
+         name="name"
+         required
+         #nameCtrl="ngModel"
+         class="form-control">
+  <button type="submit"
+          [disabled]="nameCtrl.invalid"
+          class="btn btn-success">Validez</button>
+</form>
+
+<div *ngIf="nameCtrl.invalid && nameCtrl.touched" class="alert alert-danger">
+  Le champ est invalide !
+</div>
+
+<div *ngIf="nameCtrl.dirty" class="alert alert-danger">
+  Le champ est dirty !
+</div>
+
+<div *ngIf="nameCtrl.valid" class="alert alert-success">
+  Le champ est valide !
+</div>
+
+<div *ngIf="nameCtrl.touched" class="alert alert-false">
+  Le champ est touché !
+</div>

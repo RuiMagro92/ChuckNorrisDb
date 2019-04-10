@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {JokeService} from '../joke.service';
-import {Joke} from '../models/joke.model';
 import {RandomJoke} from '../models/randomjoke.model';
 
 @Component({
@@ -10,7 +9,12 @@ import {RandomJoke} from '../models/randomjoke.model';
 })
 export class JokeComponent implements OnInit {
   rJoke: RandomJoke;
-
+   gifs = ['https://media.giphy.com/media/BIuuwHRNKs15C/200.gif',
+    'https://media.giphy.com/media/w7tU2rQXgRzVK/giphy.gif',
+    'https://media2.giphy.com/media/d2jfPv6CUzpopfLa/giphy.gif',
+    'https://media.giphy.com/media/xT5LMWvA81jKHj9v44/giphy.gif',
+    'https://media.giphy.com/media/3o6Mb395KnQLgZvSY8/giphy.gif'];
+  gif = 'https://media.giphy.com/media/BIuuwHRNKs15C/200.gif';
   constructor(public jokeService: JokeService) {
   }
 
@@ -20,7 +24,7 @@ export class JokeComponent implements OnInit {
   getJoke() {
     this.jokeService.getRandomJoke().subscribe(res => {
       this.rJoke = res;
-      console.log(this.rJoke);
+      this.gif = this.gifs[Math.floor(Math.random() * this.gifs.length)];
     });
   }
 

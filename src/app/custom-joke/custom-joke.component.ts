@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {JokeService} from '../joke.service';
 
 @Component({
   selector: 'app-custom-joke',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-joke.component.css']
 })
 export class CustomJokeComponent implements OnInit {
-
-  constructor() { }
+  firstname: string;
+  lastname: string;
+  constructor(public jokeService: JokeService) { }
 
   ngOnInit() {
+  }
+
+  generateCustomJoke() {
+
   }
 
 }
