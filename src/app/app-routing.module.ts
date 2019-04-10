@@ -9,7 +9,7 @@ const routes: Routes = [{path: '', redirectTo: 'joke', pathMatch: 'full'},
   {path: 'joke', component: JokeComponent},
   {path: 'categories', component: CategoriesComponent},
   {path: 'customjoke', component: CustomJokeComponent},
-  {path: 'category', component: JokeDetailComponent}];
+  {path: 'category/:id', component: JokeDetailComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

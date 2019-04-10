@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {JokeService} from '../joke.service';
 import {RandomJoke} from '../models/randomjoke.model';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-joke-detail',
@@ -9,24 +10,19 @@ import {RandomJoke} from '../models/randomjoke.model';
 })
 export class JokeDetailComponent implements OnInit {
 
-  jokes: RandomJoke;
+  jokes: RandomJoke[];
 
-  constructor(private js: JokeService) { }
+  constructor(private js: JokeService, public ar: ActivatedRoute) { }
 
 
   ngOnInit() {
-    return this.getExplicit();
-    return this.getNerdy();
+    const categoryName = this.ar.snapshot.paramMap.get('id');
+    this.getJokesFromCategory(categoryName);
   }
 
-  getNerdy() {
-    this.js.getNerdy().subscribe(jokes => {
-      this.jokes = jokes;
-    });
-  }
-  getExplicit() {
-    this.js.getExplicit().subscribe(jokes => {
-      this.jokes = jokes;
+  getJokesFromCategory(categoryName: string) {
+    this.js.getJokesFromCategory(categoryName).subscribe(res => {
+      this.jokes = res;
     });
   }
 }
