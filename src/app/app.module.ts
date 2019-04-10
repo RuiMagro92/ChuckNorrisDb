@@ -7,6 +7,7 @@ import { JokeComponent } from './joke/joke.component';
 import { JokesComponent } from './jokes/jokes.component';
 import { CategoryComponent } from './category/category.component';
 import { CategoriesComponent } from './categories/categories.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CategoriesComponent } from './categories/categories.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
