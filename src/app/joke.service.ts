@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {RandomJoke} from './models/randomjoke.model';
 import {Observable} from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,4 +19,11 @@ API_URL = 'https://api.icndb.com';
     return this.http.get<RandomJoke>(this.API_URL + '/jokes/random?firstName=' + firstname + '&lastName=' + lastname);
   }
 
+  getNerdy(): Observable<RandomJoke> {
+    return this.http.get<RandomJoke>(this.API_URL + 'jokes/random?limitTo=[nerdy]');
+  }
+
+  getExplicit(): Observable<RandomJoke> {
+    return this.http.get<RandomJoke>(this.API_URL + 'jokes/random?limitTo=[explicit]');
+  }
 }

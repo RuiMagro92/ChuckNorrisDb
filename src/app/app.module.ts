@@ -11,6 +11,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {MenuComponent} from './menu/menu.component';
 import { CustomJokeComponent } from './custom-joke/custom-joke.component';
 import {FormsModule} from '@angular/forms';
+import { JokeDetailComponent } from './joke-detail/joke-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {FormsModule} from '@angular/forms';
     MenuComponent,
     CategoriesComponent,
     CustomJokeComponent,
+    JokeDetailComponent,
   ],
   imports: [
     BrowserModule,
