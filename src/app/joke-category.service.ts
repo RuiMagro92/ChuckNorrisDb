@@ -12,7 +12,7 @@ export class JokeCategoryService {
   constructor(public http: HttpClient ) {}
 
   getJokesFromCategory(category: string): Observable<JokeCategory> {
-      return this.http.get<JokeCategory>(this.API_URL + '/jokes/?limitTo=[' + category + ']');
+      return this.http.get<JokeCategory>(this.API_URL + '/jokes/?escape=javascript&limitTo=[' + category + ']');
   }
 
 }
